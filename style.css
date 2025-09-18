@@ -454,3 +454,127 @@ p { font-size: 1.1rem; }
     max-width: 600px;
     margin: 10px auto 0;
 }
+
+/* =========================================
+  NEW RESPONSIVE STYLES
+  (Add this to the end of style.css)
+=========================================
+*/
+@media (max-width: 768px) {
+
+    /* --- Typography --- */
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.5rem; }
+    p { font-size: 1rem; }
+    .feature-text p { font-size: 1rem; }
+
+    /* --- Navigation --- */
+    /* This stacks the nav items on mobile */
+    .navbar .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        margin: 8px 0;
+    }
+    
+    /* --- Hero Section --- */
+    .hero {
+        text-align: center;
+        min-height: auto;
+        padding: 40px 0;
+    }
+    .hero-content {
+        flex-direction: column; /* Stack text and image */
+        gap: 30px;
+    }
+    .hero-text {
+        text-align: center;
+    }
+    .profile-pic {
+        max-width: 280px; /* Make image smaller */
+    }
+    
+    /* --- General Layouts --- */
+    .container {
+        padding: 0 15px;
+    }
+    section {
+        padding: 40px 0;
+    }
+
+    /* --- Feature Sections (for orga.html) --- */
+    .feature-content {
+        flex-direction: column; /* Stack all feature sections */
+        gap: 30px;
+    }
+    /* This makes the reversed sections stack as text, then image */
+    .feature-content.reversed {
+        flex-direction: column-reverse;
+    }
+
+    .feature-text {
+        text-align: center;
+    }
+    
+    .feature-text ul {
+        text-align: left;
+        display: inline-block; /* Fixes centering */
+        margin-top: 15px;
+    }
+
+    /* This fixes the checkmark alignment */
+    .feature-text li::before {
+        position: static; /* Remove absolute positioning */
+        margin-right: 8px; /* Add some space */
+    }
+
+    /* --- Install Section (for orga.html) --- */
+    /* This stacks the install steps and centers them */
+    .install-steps li {
+        padding-left: 0;
+        text-align: center;
+    }
+    .install-steps li::before {
+        position: static;
+        display: block;
+        margin: 0 auto 10px;
+    }
+    .install-steps li p {
+        text-align: center;
+    }
+    
+    /* --- Skills Grid --- */
+    .skills-grid {
+         gap: 10px;
+    }
+    .skill-item {
+        flex-basis: 120px; /* Allow more items per row on small screens */
+    }
+    
+    /* --- Orga Page Header --- */
+    .product-header h1 {
+        font-size: 2rem;
+    }
+    
+    /* --- Footer --- */
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 80%;
+        box-sizing: border-box; /* Ensures padding doesn't break width */
+    }
+}
