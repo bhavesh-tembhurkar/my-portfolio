@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orga: Secure File Vault for macOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html#projects" class="nav-brand">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <div class="product-page">
+        
+        <header class="product-header">
+            <div class="container">
+                <h1>Orga: Secure File Vault for macOS</h1>
+                <p class="tagline">A modern, native macOS application for your sensitive files.</p>
+                <div class="product-buttons">
+                    <a href="https://drive.google.com/file/d/1C1dWHW5MyyrJ9lINMbDuEuUXIvPQmCqv/view?usp=sharing" class="btn btn-primary" download>Download Now for macOS</a>
+                    </div>
+            </div>
+        </header>
+
+        <section id="install" class="install-section">
+            <div class="container feature-content">
+                <div class="feature-text">
+                    <h2>Quick Install</h2>
+                    <p>Get up and running in under a minute.</p>
+                    
+                    <ol class="install-steps">
+                        <li>
+                            <strong>Download</strong>
+                            <p>Click the "Download Now" button to get the <code>Orga.zip</code> file.</p>
+                        </li>
+                        <li>
+                            <strong>Unzip</strong>
+                            <p>Double-click the <code>Orga.zip</code> file to unzip it. This will create <code>Orga.app</code>.</p>
+                        </li>
+                        <li>
+                            <strong>Install</strong>
+                            <p>Move the <code>Orga.app</code> file into your <strong>'Applications'</strong> folder.</p>
+                        </li>
+                        <li>
+                            <strong>Launch</strong>
+                            <p>Open <strong>Launchpad</strong> (the rocket icon in your Dock) and click the 'Orga' icon to start!</p>
+                        </li>
+                    </ol>
+                    </div>
+                <div class="feature-image">
+                        <div class="video-embed">
+                           <iframe src="https://www.youtube.com/embed/QgqZn6PfKPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="features-headline">
+            <div class="container">
+                <h2>Discover What's Inside</h2>
+                <p>Orga is built with powerful, industry-standard technology for your peace of mind.</p>
+            </div>
+        </section>
+        <section class="feature-section">
+            <div class="container feature-content">
+                <div class="feature-text">
+                    <h3>Dual-Mode Security Architecture</h3>
+                    <p>Choose the protection that fits your needs. Orga provides two distinct modes for flexibility and control.</p>
+                    <ul>
+                        <li><strong>Advanced Security Mode:</strong> Utilizes Apple's native CryptoKit framework for hardware-accelerated AES-26-GCM authenticated encryption for maximum protection.</li>
+                        <li><strong>Rapid Hide Mode:</strong> A high-speed 'stealth' mode that instantly obscures files, making them invisible on the system. It's the perfect choice for everyday privacy and convenience.</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <img src="images/orga-feature-1.jpg" alt="Orga Dual-Mode Security">
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-section alt-bg">
+            <div class="container feature-content reversed">
+                <div class="feature-image">
+                    <img src="images/orga-feature-2.jpg" alt="Orga Touch ID">
+                </div>
+                <div class="feature-text">
+                    <h3>Secure Authentication System</h3>
+                    <p>Your data is protected by multi-layered authentication. Passwords are never stored.</p>
+                    <ul>
+                        <li><strong>Password Hashing:</strong> Uses a secure SHA-512 salt-and-hash system.</li>
+                        <li><strong>Keychain Integration:</strong> Securely stores the password hash, salt, and encryption keys in the macOS Keychain.</li>
+                        <li><strong>Biometric Login:</strong> Full integration with Touch ID using the LocalAuthentication framework.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <div class="container feature-content">
+                <div class="feature-text">
+                    <h3>Advanced Temporary File Management</h3>
+                    <p>Orga leaves no trace. Decrypted files are managed in a secure, self-destructing temporary cache.</p>
+                    <ul>
+                        <li>Implemented a multi-layered security strategy for temporary decrypted files.</li>
+                        <li>Automatically cleans up the entire temporary directory on every launch.</li>
+                        <li>A 5-minute "self-destruct" timer automatically deletes temporary files when the app is inactive.</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <img src="images/orga-feature-3.jpg" alt="Orga Temp File Management">
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-section alt-bg">
+            <div class="container feature-content reversed">
+                <div class="feature-image">
+                    <img src="images/orga-feature-4.png" alt="Orga Modern UI">
+                </div>
+                <div class="feature-text">
+                    <h3>Modern, Minimalistic User Interface</h3>
+                    <p>A beautiful, responsive UI built with a professional sidebar layout using SwiftUI.</p>
+                    <ul>
+                        <li>Category-based filtering system (All, Images, Videos, etc.).</li>
+                        <li>Designed and implemented a central <code>Theme.swift</code> style guide for brand consistency.</li>
+                        <li>Polished user experience with transparent UI elements and minimalistic effects.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-section">
+            <div class="container">
+                <h2 style="text-align: center;">Technical Stack</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">Swift</div>
+                    <div class="skill-item">SwiftUI</div>
+                    <div class="skill-item">CryptoKit</div>
+                    <div class="skill-item">LocalAuthentication</div>
+                    <div class="skill-item">KeychainAccess</div>
+                    <div class="skill-item">MVVM Architecture</div>
+                    <div class="skill-item">FileManager API</div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    
+    <footer id="contact">
+        <div class="container">
+            <h2>Let's Collaborate</h2>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/bhavesh-tembhurkar-75b5862ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-primary" target="_blank">LinkedIn</a>
+                <a href="https://github.com/bhavesh-tembhurkar" class="btn btn-primary" target="_blank">GitHub</a>
+                <a href="mailto:bhaveshtembhurkar816@gmail.com?subject=Hello&body=Hi Bhavesh, I would like to connect with you." class="btn btn-primary">Email Me</a>
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
