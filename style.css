@@ -1,5 +1,6 @@
 /* --- Global Styles --- */
 :root {
+    /* Bold and modern orange */
     --primary-color: #FF5733; 
     --secondary-color: #f0f0f0;
     --text-color: #333;
@@ -7,6 +8,7 @@
     --section-bg-color: #f9f9f9;
 }
 
+/* Smooth scroll for anchor links */
 html {
     scroll-behavior: smooth;
 }
@@ -31,6 +33,7 @@ section {
     text-align: center;
 }
 
+/* This makes every other section a slightly different color */
 section:nth-child(even) {
     background-color: var(--section-bg-color);
 }
@@ -42,8 +45,8 @@ h1, h2, h3 {
 
 h1 { font-size: 3rem; }
 h2 { font-size: 2.5rem; }
-h3 { font-size: 1.8rem; }
 p { font-size: 1.1rem; }
+
 
 /* --- Navigation Bar --- */
 .navbar {
@@ -82,7 +85,9 @@ p { font-size: 1.1rem; }
     padding: 0;
 }
 
-.nav-menu li { margin-left: 20px; }
+.nav-menu li {
+    margin-left: 20px;
+}
 
 .nav-menu a {
     text-decoration: none;
@@ -91,7 +96,26 @@ p { font-size: 1.1rem; }
     transition: color 0.3s ease;
 }
 
-.nav-menu a:hover { color: var(--primary-color); }
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+/* Hamburger Menu Icon (hidden on desktop) */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--text-color);
+}
+
 
 /* --- Buttons --- */
 .btn {
@@ -123,13 +147,14 @@ p { font-size: 1.1rem; }
     transform: translateY(-2px);
 }
 
+
 /* --- Hero Section --- */
 .hero {
     min-height: 80vh;
     display: flex;
     align-items: center;
     text-align: left;
-    background-color: #fff;
+    background-color: #fff; /* Hero is always white */
 }
 
 .hero-content {
@@ -139,11 +164,13 @@ p { font-size: 1.1rem; }
     gap: 40px;
 }
 
-.hero-text { flex: 1; }
+.hero-text {
+    flex: 1;
+}
 
-.hero-image { 
-    flex: 1; 
-    text-align: center; 
+.hero-image {
+    flex: 1;
+    text-align: center;
 }
 
 .profile-pic {
@@ -154,7 +181,10 @@ p { font-size: 1.1rem; }
     transition: transform 0.3s ease;
 }
 
-.profile-pic:hover { transform: scale(1.02); }
+.profile-pic:hover {
+    transform: scale(1.02);
+}
+
 
 /* --- Education Section --- */
 .education-item {
@@ -175,13 +205,17 @@ p { font-size: 1.1rem; }
     margin-bottom: 5px;
     color: var(--primary-color);
 }
-.education-item p { margin: 0; font-size: 1rem; }
+.education-item p {
+    margin: 0;
+    font-size: 1rem;
+}
+
 
 /* --- Skills Section --- */
 .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;         /* Use Flexbox instead of Grid */
+    flex-wrap: wrap;       /* Allow items to wrap to the next line */
+    justify-content: center; /* THIS IS THE FIX: It centers all your items */
     gap: 20px;
     margin-top: 30px;
 }
@@ -195,14 +229,15 @@ p { font-size: 1.1rem; }
     font-weight: 500;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-align: center; 
-    flex-basis: 200px;
-    flex-grow: 1;
+    flex-basis: 200px; /* ADDED: Sets the base width */
+    flex-grow: 1;     /* ADDED: Allows items to grow slightly to fill space */
 }
 
 .skill-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
 
 /* --- Projects Section --- */
 .project-card {
@@ -215,13 +250,16 @@ p { font-size: 1.1rem; }
     text-align: left;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
-.project-card h3 { margin-top: 0; }
+
+.project-card h3 {
+    margin-top: 0;
+}
 
 /* --- Contact Section --- */
 #contact {
     background: var(--text-color);
     color: #fff;
-    text-align: center;
+    text-align: center; /* This centers the text content */
 }
 
 #contact h2 { color: #fff; }
@@ -229,19 +267,43 @@ p { font-size: 1.1rem; }
 
 .contact-links {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* This centers the buttons */
     gap: 10px;
     margin-top: 20px;
 }
 
-/* --- Orga Product Page --- */
-.product-section { padding: 40px 0; }
-.product-section h2 { text-align: center; margin-bottom: 30px; }
-.product-section h3 { font-size: 1.5rem; color: var(--primary-color); }
-.product-section ul { list-style-type: disc; padding-left: 20px; }
+/* --- Orga Product Page Specifics --- */
+/* =========================================
+  NEW PRODUCT PAGE FEATURE STYLES
+  (Add this to the end of style.css)
+=========================================
+*/
 
-.feature-section { padding: 80px 0; }
-.feature-section.alt-bg { background-color: var(--section-bg-color); }
+/* --- Remove old product page styles --- */
+.product-section {
+    padding: 40px 0;
+}
+.product-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.product-section h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+.product-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* --- New Feature Section Layout --- */
+.feature-section {
+    padding: 80px 0;
+}
+
+.feature-section.alt-bg {
+    background-color: var(--section-bg-color);
+}
 
 .feature-content {
     display: flex;
@@ -249,10 +311,20 @@ p { font-size: 1.1rem; }
     gap: 50px;
 }
 
-.feature-content.reversed { flex-direction: row-reverse; }
+/* This class reverses the layout */
+.feature-content.reversed {
+    flex-direction: row-reverse;
+}
 
-.feature-text { flex: 1; text-align: left; }
-.feature-image { flex: 1; text-align: center; }
+.feature-text {
+    flex: 1; /* Takes up 50% of the space */
+    text-align: left;
+}
+
+.feature-image {
+    flex: 1; /* Takes up 50% of the space */
+    text-align: center;
+}
 
 .feature-image img {
     max-width: 100%;
@@ -260,11 +332,28 @@ p { font-size: 1.1rem; }
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
-.feature-image img:hover { transform: scale(1.03); }
 
-.feature-text h3 { font-size: 2rem; color: var(--primary-color); margin-top: 0; }
-.feature-text p { font-size: 1.2rem; color: #555; }
-.feature-text ul { list-style-type: none; padding-left: 0; margin-top: 20px; }
+.feature-image img:hover {
+    transform: scale(1.03);
+}
+
+.feature-text h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.feature-text p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.feature-text ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
 .feature-text li {
     font-size: 1rem;
     margin-bottom: 15px;
@@ -272,6 +361,8 @@ p { font-size: 1.1rem; }
     padding-left: 30px;
     line-height: 1.5;
 }
+
+/* This creates a little checkmark like on professional sites */
 .feature-text li::before {
     content: '✔';
     color: var(--primary-color);
@@ -281,10 +372,35 @@ p { font-size: 1.1rem; }
     font-weight: bold;
 }
 
-/* --- Install Section --- */
-.install-section { padding: 80px 0; background-color: #fff; border-bottom: 1px solid #eee; }
-.install-steps { list-style: none; padding-left: 0; margin-top: 30px; counter-reset: step; }
-.install-steps li { position: relative; padding-left: 45px; margin-bottom: 25px; text-align: left; }
+/* =========================================
+  NEW "HOW TO INSTALL" SECTION STYLES
+  (Add this to the end of style.css)
+=========================================
+*/
+
+.install-section {
+    padding: 80px 0;
+    /* This gives it a clean white background */
+    background-color: #fff; 
+    border-bottom: 1px solid #eee;
+}
+
+.install-steps {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 30px;
+    /* This makes the numbers "1." "2." "3." work */
+    counter-reset: step; 
+}
+
+.install-steps li {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* This creates the "1." "2." "3." numbers */
 .install-steps li::before {
     content: counter(step);
     counter-increment: step;
@@ -301,18 +417,30 @@ p { font-size: 1.1rem; }
     line-height: 30px;
     text-align: center;
 }
-.install-steps li strong { font-size: 1.2rem; color: var(--text-color); }
-.install-steps li p { font-size: 1rem; color: #555; margin: 5px 0 0; }
 
+.install-steps li strong {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.install-steps li p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0 0;
+}
+
+/* This makes your embedded video responsive */
 .video-embed {
     position: relative;
-    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     border-radius: 8px;
     background-color: #f0f0f0;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
+
 .video-embed iframe {
     position: absolute;
     top: 0;
@@ -322,74 +450,171 @@ p { font-size: 1.1rem; }
     border: 0;
 }
 
-/* --- Features Headline --- */
-.features-headline { padding: 80px 0 0; text-align: center; background-color: var(--section-bg-color); }
-.features-headline p { font-size: 1.2rem; color: #555; max-width: 600px; margin: 10px auto 0; }
+/* =========================================
+  NEW "FEATURES HEADLINE" STYLE
+  (Add this to the end of style.css)
+=========================================
+*/
 
-/* --- Responsive Styles --- */
-@media (max-width: 1024px) {
-    .hero-content, .feature-content { gap: 30px; }
+.features-headline {
+    /* Add padding only to the top, so it sits right above the first feature */
+    padding: 80px 0 0;
+    text-align: center;
+    /* This grey matches the feature sections */
+    background-color: var(--section-bg-color); 
 }
 
+.features-headline p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 600px;
+    margin: 10px auto 0;
+}
+
+/* =========================================
+  NEW RESPONSIVE STYLES
+  (I have replaced the old stacked-nav code)
+=========================================
+*/
 @media (max-width: 768px) {
+
+    /* --- Typography --- */
     h1 { font-size: 2.2rem; }
     h2 { font-size: 1.8rem; }
     h3 { font-size: 1.5rem; }
     p { font-size: 1rem; }
+    .feature-text p { font-size: 1rem; }
 
-    .navbar .container { flex-direction: column; padding: 1rem; }
-    .nav-menu { flex-direction: column; align-items: center; margin-top: 15px; width: 100%; }
-    .nav-menu li { margin: 8px 0; }
+    /* --- Navigation (NEW HAMBURGER STYLES) --- */
+    .navbar .container {
+        padding: 1rem; /* Added padding */
+    }
 
-    .hero { text-align: center; min-height: auto; padding: 40px 0; }
-    .hero-content { flex-direction: column; gap: 30px; }
-    .hero-text { text-align: center; }
-    .profile-pic { max-width: 280px; }
+    .hamburger-menu {
+        display: block; /* Show the hamburger */
+    }
+    
+    /* This makes the "X" animation */
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 
-    .container { padding: 0 15px; }
-    section { padding: 40px 0; }
+    /* Hide the menu by default */
+    .nav-menu {
+        position: fixed;
+        left: -100%; /* Start off-screen */
+        top: 70px; /* Position below navbar */
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
 
-    .feature-content { flex-direction: column; gap: 30px; }
-    .feature-content.reversed { flex-direction: column-reverse; }
-    .feature-text { text-align: center; }
-    .feature-text ul { text-align: left; display: inline-block; margin-top: 15px; }
-    .feature-text li::before { position: static; margin-right: 8px; }
+    /* This class is added by JavaScript to show the menu */
+    .nav-menu.active {
+        left: 0; /* Slide in */
+    }
 
-    .install-steps li { padding-left: 0; text-align: center; }
-    .install-steps li::before { position: static; display: block; margin: 0 auto 10px; }
-    .install-steps li p { text-align: center; }
+    .nav-menu li {
+        margin: 16px 0; /* Space out the links */
+    }
+    
+    /* --- Hero Section --- */
+    .hero {
+        text-align: center;
+        min-height: auto;
+        padding: 40px 0;
+    }
+    .hero-content {
+        flex-direction: column; /* Stack text and image */
+        gap: 30px;
+    }
+    .hero-text {
+        text-align: center;
+    }
+    .profile-pic {
+        max-width: 280px; /* Make image smaller */
+    }
+    
+    /* --- General Layouts --- */
+    .container {
+        padding: 0 15px;
+    }
+    section {
+        padding: 40px 0;
+    }
 
-    .skills-grid { gap: 10px; }
-    .skill-item { flex-basis: 120px; }
+    /* --- Feature Sections (for orga.html) --- */
+    .feature-content {
+        flex-direction: column; /* Stack all feature sections */
+        gap: 30px;
+    }
+    /* This makes the reversed sections stack as text, then image */
+    .feature-content.reversed {
+        flex-direction: column-reverse;
+    }
 
-    .product-header h1 { font-size: 2rem; }
-    .contact-links { flex-direction: column; align-items: center; gap: 15px; }
-    .btn { width: 80%; box-sizing: border-box; }
+    .feature-text {
+        text-align: center;
+    }
+    
+    .feature-text ul {
+        text-align: left;
+        display: inline-block; /* Fixes centering */
+        margin-top: 15px;
+    }
+
+    /* This fixes the checkmark alignment */
+    .feature-text li::before {
+        position: static; /* Remove absolute positioning */
+        margin-right: 8px; /* Add some space */
+    }
+
+    /* --- Install Section (for orga.html) --- */
+    /* This stacks the install steps and centers them */
+    .install-steps li {
+        padding-left: 0;
+        text-align: center;
+    }
+    .install-steps li::before {
+        position: static;
+        display: block;
+        margin: 0 auto 10px;
+    }
+    .install-steps li p {
+        text-align: center;
+    }
+    
+    /* --- Skills Grid --- */
+    .skills-grid {
+         gap: 10px;
+    }
+    .skill-item {
+        flex-basis: 120px; /* Allow more items per row on small screens */
+    }
+    
+    /* --- Orga Page Header --- */
+    .product-header h1 {
+        font-size: 2rem;
+    }
+    
+    /* --- Footer --- */
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 80%;
+        box-sizing: border-box; /* Ensures padding doesn't break width */
+    }
 }
-
-@media (max-width: 480px) {
-    h1 { font-size: 1.8rem; }
-    h2 { font-size: 1.5rem; }
-    h3 { font-size: 1.2rem; }
-    p { font-size: 0.9rem; }
-
-    .hero-content { flex-direction: column; gap: 20px; }
-    .profile-pic { max-width: 180px; }
-
-    .skills-grid { gap: 8px; }
-    .skill-item { flex-basis: 100px; font-size: 0.85rem; padding: 10px; }
-
-    .project-card { padding: 15px; }
-
-    .feature-content { flex-direction: column !important; gap: 20px; }
-    .feature-text, .feature-image { text-align: center; }
-    .feature-text ul { display: inline-block; text-align: left; margin-top: 10px; }
-
-    .install-steps li { padding-left: 0; text-align: center; }
-    .install-steps li::before { position: static; display: block; margin: 0 auto 8px; }
-
-    .btn { width: 90%; padding: 8px 12px; }
-}
-
-/* --- Make all images flexible --- */
-img { max-width: 100%; height: auto; }
