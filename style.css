@@ -44,7 +44,6 @@ h1 { font-size: 3rem; }
 h2 { font-size: 2.5rem; }
 p { font-size: 1.1rem; }
 
-
 /* --- Navigation Bar --- */
 .navbar {
     background: var(--bg-color);
@@ -111,7 +110,6 @@ p { font-size: 1.1rem; }
     background-color: var(--text-color);
 }
 
-
 /* --- Buttons --- */
 .btn {
     display: inline-block;
@@ -142,7 +140,6 @@ p { font-size: 1.1rem; }
     transform: translateY(-2px);
 }
 
-
 /* --- Hero Section --- */
 .hero {
     min-height: 80vh;
@@ -163,18 +160,27 @@ p { font-size: 1.1rem; }
     flex: 1;
 }
 
+/* This container ensures the zoomed image stays in place */
 .hero-image {
     flex: 1;
     text-align: center;
+    overflow: hidden; 
+    padding: 40px;
 }
 
-/* FIX FOR SQUISHED IMAGE */
+/* LINKEDIN-STYLE PROFILE IMAGE FIX */
 .profile-pic {
     width: 350px;
     height: 350px;
     border-radius: 50%; 
+    
+    /* Zooms into the image to match your LinkedIn crop */
     object-fit: cover; 
-    object-position: center top;
+    transform: scale(1.4); 
+    
+    /* Adjust this to center your face (Lower % moves photo UP) */
+    object-position: center 35%;
+    
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     display: block;
@@ -182,9 +188,8 @@ p { font-size: 1.1rem; }
 }
 
 .profile-pic:hover {
-    transform: scale(1.02);
+    transform: scale(1.45); /* Slight extra zoom on hover */
 }
-
 
 /* --- Education Section --- */
 .education-item {
@@ -209,7 +214,6 @@ p { font-size: 1.1rem; }
     margin: 0;
     font-size: 1rem;
 }
-
 
 /* --- Skills Section --- */
 .skills-grid {
@@ -238,7 +242,6 @@ p { font-size: 1.1rem; }
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-
 /* --- Projects Section --- */
 .project-card {
     max-width: 800px;
@@ -249,10 +252,6 @@ p { font-size: 1.1rem; }
     padding: 24px 30px;
     text-align: left;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-.project-card h3 {
-    margin-top: 0;
 }
 
 /* --- Contact Section --- */
@@ -271,80 +270,6 @@ p { font-size: 1.1rem; }
     gap: 10px;
     margin-top: 20px;
 }
-
-/* --- Orga Product Page Styles --- */
-.product-section { padding: 40px 0; }
-.product-section h2 { text-align: center; margin-bottom: 30px; }
-.product-section h3 { font-size: 1.5rem; color: var(--primary-color); }
-.product-section ul { list-style-type: disc; padding-left: 20px; }
-
-.feature-section { padding: 80px 0; }
-.feature-section.alt-bg { background-color: var(--section-bg-color); }
-.feature-content { display: flex; align-items: center; gap: 50px; }
-.feature-content.reversed { flex-direction: row-reverse; }
-.feature-text { flex: 1; text-align: left; }
-.feature-image { flex: 1; text-align: center; }
-
-.feature-image img {
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.feature-text h3 { font-size: 2rem; color: var(--primary-color); margin-top: 0; }
-.feature-text p { font-size: 1.2rem; color: #555; }
-.feature-text ul { list-style-type: none; padding-left: 0; margin-top: 20px; }
-
-.feature-text li {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    position: relative;
-    padding-left: 30px;
-}
-
-.feature-text li::before {
-    content: '✔';
-    color: var(--primary-color);
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-weight: bold;
-}
-
-/* --- Install Section --- */
-.install-section { padding: 80px 0; background-color: #fff; border-bottom: 1px solid #eee; }
-.install-steps { list-style: none; padding-left: 0; margin-top: 30px; counter-reset: step; }
-.install-steps li { position: relative; padding-left: 45px; margin-bottom: 25px; text-align: left; }
-.install-steps li::before {
-    content: counter(step);
-    counter-increment: step;
-    position: absolute;
-    left: 0;
-    top: -5px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    background-color: var(--section-bg-color);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-}
-
-.video-embed {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-
-.features-headline { padding: 80px 0 0; text-align: center; background-color: var(--section-bg-color); }
 
 /* --- Responsive Styles --- */
 @media (max-width: 768px) {
@@ -372,13 +297,12 @@ p { font-size: 1.1rem; }
     .hero-text { text-align: center; }
 
     /* MOBILE IMAGE FIX */
+    .hero-image { padding: 20px; }
     .profile-pic {
         width: 250px;
         height: 250px;
+        transform: scale(1.3); /* Slightly less zoom for mobile */
     }
-
-    .feature-content, .feature-content.reversed { flex-direction: column; }
-    .feature-image, .feature-text { width: 100%; text-align: center; }
     
     .contact-links { flex-direction: column; align-items: center; }
     .btn { width: 80%; }
