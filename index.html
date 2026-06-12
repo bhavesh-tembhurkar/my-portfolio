@@ -3,145 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhavesh Tembhurkar - macOS & Web Developer</title>
+    <title>Bhavesh Tembhurkar — macOS & Web Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Bhavesh Tembhurkar, an aspiring iOS & macOS Developer specializing in Swift, SwiftUI, CryptoKit, and full-stack web development.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar">
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="main-navbar">
         <div class="container">
-            <a href="#home" class="nav-brand">BHAVESH TEMBHURKAR</a>
+            <a href="#home" class="nav-brand" id="brand-link">BHAVESH</a>
             
-            <div class="hamburger-menu">
+            <div class="hamburger-menu" id="mobile-toggle" aria-label="Toggle Navigation Menu">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
 
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-menu" id="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header id="home" class="hero">
         <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Hi, I'm Bhavesh Tembhurkar</h1>
-                <p>Aspiring iOS & macOS Developer | Building Apps for Apple Devices</p>
+            <div class="hero-text reveal">
+                <span class="hero-badge">Aspiring macOS & iOS Developer</span>
+                <h1>Hi, I'm <span>Bhavesh</span></h1>
+                <p>Building secure, native applications for the Apple ecosystem and crafting modern web experiences.</p>
+                
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Contact</a>
-                    <a href="#projects" class="btn btn-secondary">View Work</a>
+                    <a href="#contact" class="btn btn-primary" id="hero-btn-contact">Get in Touch</a>
+                    <a href="#projects" class="btn btn-secondary" id="hero-btn-projects">View My Work</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h4>MCA '26</h4>
+                        <p>Current CGPA 8.04</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>SwiftUI</h4>
+                        <p>Native macOS/iOS</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>Security</h4>
+                        <p>AES Encryption & Vaults</p>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/profile_pic.jpg" alt="Bhavesh Tembhurkar" class="profile-pic">
+            
+            <div class="hero-image reveal">
+                <div class="profile-pic-container">
+                    <img src="images/profile_pic.jpg" alt="Bhavesh Tembhurkar" class="profile-pic" id="profile-img">
+                </div>
             </div>
         </div>
     </header>
 
+    <!-- About Me Section -->
     <section id="about">
         <div class="container">
-            <h2>About Me</h2>
-            <p>
-                I am an aspiring iOS and macOS developer passionate about creating secure, intuitive, and high-performance applications for Apple devices. Skilled in Swift and SwiftUI, I focus on building responsive and user-friendly apps that leverage the full potential of the Apple ecosystem. As a quick learner and detail-oriented problem solver, I am seeking internship opportunities to contribute to innovative Apple software projects and grow as a professional in iOS/macOS development.
-            </p>
+            <h2 class="section-title reveal">About Me</h2>
+            <div class="about-card reveal">
+                <p>
+                    I am an aspiring iOS and macOS developer passionate about creating secure, intuitive, and high-performance applications for Apple devices. Skilled in Swift and SwiftUI, I focus on building responsive, user-friendly applications that leverage the full potential of the Apple ecosystem.
+                </p>
+                <p>
+                    As a quick learner and detail-oriented developer, I love tackling system-level APIs, cryptographically securing user data (using CryptoKit and Keychain), and structuring codebases using clean MVVM architectures. I am actively seeking internship opportunities to contribute to innovative software projects.
+                </p>
             </div>
+        </div>
     </section>
 
+    <!-- Education Section -->
     <section id="education">
         <div class="container">
-            <h2>Education</h2>
+            <h2 class="section-title reveal">Education</h2>
             
-            <div class="education-item">
-                <h3>Master of Computer Application (MCA)</h3>
-                <p>G H Raisoni College of Engineering & Management (GHRCEM), Nagpur</p>
-                <p><em>(2024 - 2026) | Current CGPA: 8.04</em></p>
-            </div>
-            
-            <div class="education-item">
-                <h3>Bachelor of Computer Application (BCA)</h3>
-                <p>Kamla Nehru Mahavidyalaya, Nagpur</p>
-                <p><em>(2020 - 2023)</em></p>
-            </div>
-            
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2>My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">Swift</div>
-                <div class="skill-item">C++</div>
-                <div class="skill-item">Python</div>
-                <div class="skill-item">JavaScript</div>
-                
-                <div class="skill-item">SwiftUI</div>
-                <div class="skill-item">UIKit</div>
-                <div class="skill-item">MVVM</div>
-                <div class="skill-item">CryptoKit</div>
-                <div class="skill-item">Keychain</div>
-                <div class="skill-item">SPM</div>
-
-                <div class="skill-item">Node.js</div>
-                <div class="skill-item">Express.js</div>
-                <div class="skill-item">EJS</div>
-                <div class="skill-item">HTML</div>
-                <div class="skill-item">CSS</div>
-
-                <div class="skill-item">Xcode</div>
-                <div class="skill-item">Git</div>
-                <div class="skill-item">GitHub</div>
-                <div class="skill-item">VS Code</div>
-
-                <div class="skill-item">MongoDB</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>My Projects</h2>
-            
-            <div class="project-card">
-                <h3>Orga: Secure File Vault for macOS</h3>
-                <p>
-                    A secure, local-first native macOS application using SwiftUI to hide, manage, and encrypt user files and folders. Implements AES-GCM authenticated encryption using CryptoKit.
-                </p>
-                <div class="project-links">
-                    <a href="orga.html" class="btn btn-secondary">Learn More</a>
+            <div class="education-timeline reveal">
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3>Master of Computer Application (MCA)</h3>
+                        <span class="education-date">2024 - 2026</span>
                     </div>
-            </div>
-            
-            <div class="project-card">
-                <h3>Face Recognition Attendance System</h3>
-                <p>
-                    A full-stack attendance system using a Python/Flask backend with the DeepFace AI library. 
-                    Features a web interface using EJS, HTML & CSS, managed by a Node.js/Express.js server.
-                </p>
-                <div class="project-links">
-                    <a href="#" class="btn btn-secondary">View Code (Private)</a>
+                    <p class="education-school">G H Raisoni College of Engineering & Management (GHRCEM), Nagpur</p>
+                    <p class="education-grade">Current Grade: CGPA 8.04</p>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3>Bachelor of Computer Application (BCA)</h3>
+                        <span class="education-date">2020 - 2023</span>
+                    </div>
+                    <p class="education-school">Kamla Nehru Mahavidyalaya, Nagpur</p>
+                    <p class="education-grade">Completed BCA Undergraduate Degree</p>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <footer id="contact">
+    <!-- Skills Section -->
+    <section id="skills">
         <div class="container">
-            <h2>Let's Collaborate</h2>
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/bhavesh-tembhurkar-75b5862ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-primary" target="_blank">LinkedIn</a>
-                <a href="https://github.com/bhavesh-tembhurkar" class="btn btn-primary" target="_blank">GitHub</a>
-                <a href="mailto:bhaveshtembhurkar816@gmail.com?subject=Hello&body=Hi Bhavesh, I would like to connect with you." class="btn btn-primary">Email Me</a>
+            <h2 class="section-title reveal">Technical Skills</h2>
+            
+            <div class="skills-container reveal">
+                <!-- Category 1: Languages -->
+                <div class="skills-category">
+                    <h3 class="skills-category-title">Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Swift</div>
+                        <div class="skill-item">C++</div>
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">HTML5 / CSS3</div>
+                    </div>
+                </div>
 
+                <!-- Category 2: Apple Frameworks -->
+                <div class="skills-category">
+                    <h3 class="skills-category-title">iOS & macOS Development</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">SwiftUI</div>
+                        <div class="skill-item">UIKit</div>
+                        <div class="skill-item">MVVM Architecture</div>
+                        <div class="skill-item">CryptoKit (AES-GCM)</div>
+                        <div class="skill-item">Keychain Services</div>
+                        <div class="skill-item">LocalAuthentication</div>
+                        <div class="skill-item">FileManager APIs</div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Web Backend & Databases -->
+                <div class="skills-category">
+                    <h3 class="skills-category-title">Backend & Database</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Node.js</div>
+                        <div class="skill-item">Express.js</div>
+                        <div class="skill-item">MongoDB</div>
+                        <div class="skill-item">EJS (Embedded JS)</div>
+                    </div>
+                </div>
+
+                <!-- Category 4: Tools -->
+                <div class="skills-category">
+                    <h3 class="skills-category-title">Tools & Ecosystem</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Xcode</div>
+                        <div class="skill-item">Git / GitHub</div>
+                        <div class="skill-item">SPM (Swift Package)</div>
+                        <div class="skill-item">VS Code</div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title reveal">Featured Projects</h2>
+            
+            <div class="projects-grid reveal">
+                <!-- Project 1: Orga -->
+                <div class="project-card">
+                    <h3>Orga: Secure File Vault for macOS <span>🍏</span></h3>
+                    <p>
+                        A secure, local-first native macOS application built with SwiftUI to hide, manage, and encrypt user files and folders. Protects sensitive documents using hardware-accelerated AES-GCM encryption through Apple's native CryptoKit framework.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">SwiftUI</span>
+                        <span class="tech-tag">CryptoKit</span>
+                        <span class="tech-tag">Keychain Access</span>
+                        <span class="tech-tag">LocalAuthentication</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="orga.html" class="btn btn-primary" id="btn-orga-learn">Learn More & Download</a>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Face Recognition -->
+                <div class="project-card">
+                    <h3>AI Face Recognition Attendance System <span>🤖</span></h3>
+                    <p>
+                        A full-stack authentication and attendance tracking system featuring a Python/Flask backend and the DeepFace AI library. Utilizes Node.js, Express, and EJS for a dynamic management console, with MongoDB tracking attendance entries in real-time.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">DeepFace AI</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/bhavesh-tembhurkar" class="btn btn-secondary" target="_blank" id="btn-face-code">View GitHub Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact">
+        <div class="container reveal">
+            <h2>Let's Collaborate</h2>
+            <p>I am currently seeking internship and junior developer positions in Swift, iOS/macOS, or web development. Let's build something great together.</p>
+            
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/bhavesh-tembhurkar-75b5862ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-primary" target="_blank" id="footer-linkedin">Connect on LinkedIn</a>
+                <a href="https://github.com/bhavesh-tembhurkar" class="btn btn-secondary" target="_blank" id="footer-github">Explore GitHub</a>
+                <a href="mailto:bhaveshtembhurkar816@gmail.com?subject=Hello&body=Hi Bhavesh, I would like to connect with you." class="btn btn-secondary" id="footer-email">Email Me</a>
+            </div>
+            
+            <p class="copyright">&copy; 2026 Bhavesh Tembhurkar. All rights reserved.</p>
         </div>
     </footer>
 

@@ -3,162 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orga: Secure File Vault for macOS</title>
+    <title>Orga — Secure File Vault for macOS</title>
+    <meta name="description" content="Orga is a secure, local-first native macOS application designed to encrypt, hide, and manage files and folders using AES-GCM and Touch ID.">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="orga-body">
 
-    <nav class="navbar">
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="product-navbar">
         <div class="container">
-            <a href="index.html#projects" class="nav-brand">← Back to Portfolio</a>
+            <a href="index.html#projects" class="nav-brand" id="back-brand">← Back to Portfolio</a>
         </div>
     </nav>
 
+    <!-- Product Header -->
     <div class="product-page">
-        
         <header class="product-header">
-            <div class="container">
-                <h1>Orga: Secure File Vault for macOS</h1>
-                <p class="tagline">A modern, native macOS application for your sensitive files.</p>
+            <div class="container reveal">
+                <h1>Orga. A secure, native vault built for macOS.</h1>
+                <p class="tagline">Simple, secure, and built specifically for your Mac. Keep your sensitive documents encrypted, hidden, and completely under your control.</p>
+                
                 <div class="product-buttons">
-                    <a href="https://drive.google.com/file/d/1C1dWHW5MyyrJ9lINMbDuEuUXIvPQmCqv/view?usp=sharing" class="btn btn-primary" download>Download Now for macOS</a>
-                    </div>
+                    <a href="https://drive.google.com/file/d/1C1dWHW5MyyrJ9lINMbDuEuUXIvPQmCqv/view?usp=sharing" class="btn btn-primary" download id="orga-download-btn">Download for macOS</a>
+                </div>
             </div>
         </header>
 
+        <!-- Quick Install & Demo Section -->
         <section id="install" class="install-section">
             <div class="container feature-content">
-                <div class="feature-text">
-                    <h2>Quick Install</h2>
-                    <p>Get up and running in under a minute.</p>
+                <div class="feature-text reveal">
+                    <h2>Quick installation.</h2>
+                    <p>Get up and running on your Mac in under a minute. No complicated setup, no hidden steps.</p>
                     
                     <ol class="install-steps">
                         <li>
-                            <strong>Download</strong>
-                            <p>Click the "Download Now" button to get the <code>Orga.zip</code> file.</p>
+                            <strong>Download zip archive</strong>
+                            <p>Click the download button above to get the latest <code>Orga.zip</code> bundle.</p>
                         </li>
                         <li>
-                            <strong>Unzip</strong>
-                            <p>Double-click the <code>Orga.zip</code> file to unzip it. This will create <code>Orga.app</code>.</p>
+                            <strong>Extract Orga app</strong>
+                            <p>Double-click the zip archive in Finder to extract the native executable <code>Orga.app</code>.</p>
                         </li>
                         <li>
-                            <strong>Install</strong>
-                            <p>Move the <code>Orga.app</code> file into your <strong>'Applications'</strong> folder.</p>
+                            <strong>Move to Applications</strong>
+                            <p>Drag the extracted <code>Orga.app</code> file straight into your macOS <strong>Applications</strong> directory.</p>
                         </li>
                         <li>
-                            <strong>Launch</strong>
-                            <p>Open <strong>Launchpad</strong> (the rocket icon in your Dock) and click the 'Orga' icon to start!</p>
+                            <strong>Launch and secure</strong>
+                            <p>Open the app via Launchpad, set up your vault master password, and start encrypting files.</p>
                         </li>
                     </ol>
-                    </div>
-                <div class="feature-image">
-                        <div class="video-embed">
-                           <iframe src="https://www.youtube.com/embed/QgqZn6PfKPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                
+                <div class="feature-image reveal">
+                    <!-- macOS Styled Window Wrapper -->
+                    <div class="video-container-mac">
+                        <div class="mac-titlebar">
+                            <div class="mac-buttons">
+                                <div class="mac-btn close"></div>
+                                <div class="mac-btn minimize"></div>
+                                <div class="mac-btn maximize"></div>
+                            </div>
+                            <span class="mac-title">Orga Showcase Demo</span>
                         </div>
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/QgqZn6PfKPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Walkthrough Section (Apple/Google style tabs) -->
+        <section class="walkthrough-section reveal">
+            <div class="container">
+                <h2>Experience the interface.</h2>
+                <p class="section-desc">Take a tour of Orga's clean, minimalist layout. Switch tabs below to preview the native macOS experience.</p>
+                
+                <div class="walkthrough-tabs">
+                    <button class="walkthrough-tab active" data-target="setup-screen" data-title="Orga — Setup Master Password">1. Setup Vault</button>
+                    <button class="walkthrough-tab" data-target="onboarding-screen" data-title="Orga — User Onboarding Walkthrough">2. Onboarding</button>
+                    <button class="walkthrough-tab" data-target="login-screen" data-title="Orga — Vault Locked (Touch ID Security)">3. Vault Lock</button>
+                    <button class="walkthrough-tab" data-target="empty-screen" data-title="Orga — Empty Active Vault">4. Empty State</button>
+                    <button class="walkthrough-tab" data-target="files-screen" data-title="Orga — Secure File Vault Manager">5. Active Vault</button>
+                    <button class="walkthrough-tab" data-target="settings-screen" data-title="Orga — App Preferences & Inactivity Settings">6. Preferences</button>
+                </div>
+                
+                <div class="walkthrough-container">
+                    <div class="walkthrough-display">
+                        <!-- macOS header mockup -->
+                        <div class="mac-titlebar">
+                            <div class="mac-buttons">
+                                <div class="mac-btn close"></div>
+                                <div class="mac-btn minimize"></div>
+                                <div class="mac-btn maximize"></div>
+                            </div>
+                            <span class="mac-title" id="walkthrough-window-title">Orga — Setup Master Password</span>
+                        </div>
+                        <!-- Interactive screens -->
+                        <img id="setup-screen" src="images/setUP.png" class="walkthrough-screen active" alt="Orga Password Setup Interface">
+                        <img id="onboarding-screen" src="images/onBoarding.png" class="walkthrough-screen" alt="Orga App Onboarding Tutorial Screen">
+                        <img id="login-screen" src="images/logIn.png" class="walkthrough-screen" alt="Orga Touch ID Login Security Vault Screen">
+                        <img id="empty-screen" src="images/homecreenEmpty.png" class="walkthrough-screen" alt="Orga Empty Vault Files Screen">
+                        <img id="files-screen" src="images/files.png" class="walkthrough-screen" alt="Orga Vault Files Management View Screen">
+                        <img id="settings-screen" src="images/settings.png" class="walkthrough-screen" alt="Orga Secure Cache Preferences settings Screen">
+                    </div>
                 </div>
             </div>
         </section>
         
-        <section class="features-headline">
+        <!-- Features Headline -->
+        <section class="features-headline reveal">
             <div class="container">
-                <h2>Discover What's Inside</h2>
-                <p>Orga is built with powerful, industry-standard technology for your peace of mind.</p>
-            </div>
-        </section>
-        <section class="feature-section">
-            <div class="container feature-content">
-                <div class="feature-text">
-                    <h3>Dual-Mode Security Architecture</h3>
-                    <p>Choose the protection that fits your needs. Orga provides two distinct modes for flexibility and control.</p>
-                    <ul>
-                        <li><strong>Advanced Security Mode:</strong> Utilizes Apple's native CryptoKit framework for hardware-accelerated AES-26-GCM authenticated encryption for maximum protection.</li>
-                        <li><strong>Rapid Hide Mode:</strong> A high-speed 'stealth' mode that instantly obscures files, making them invisible on the system. It's the perfect choice for everyday privacy and convenience.</li>
-                    </ul>
-                </div>
-                <div class="feature-image">
-                    <img src="images/orga-feature-1.jpg" alt="Orga Dual-Mode Security">
-                </div>
+                <h2>Features designed for safety.</h2>
+                <p>Orga blends system-level security controls with native Swift frameworks to provide robust, local-first file privacy without external dependencies.</p>
             </div>
         </section>
 
-        <section class="feature-section alt-bg">
-            <div class="container feature-content reversed">
-                <div class="feature-image">
-                    <img src="images/orga-feature-2.jpg" alt="Orga Touch ID">
-                </div>
-                <div class="feature-text">
-                    <h3>Secure Authentication System</h3>
-                    <p>Your data is protected by multi-layered authentication. Passwords are never stored.</p>
+        <!-- Asymmetric Features Grid (Chrome Style) -->
+        <div class="features-grid-container">
+            
+            <!-- Card 1: One-Click Stealth Lock (Span 2 columns) -->
+            <div class="feature-card-block card-span-2 card-theme-orange reveal">
+                <div class="feature-card-text">
+                    <h3>One-click stealth lock.</h3>
+                    <p>Keep your sensitive files completely out of sight in less than a second. Orga lets you instantly obscure files, making them invisible in Finder searches, lists, and Terminal:</p>
                     <ul>
-                        <li><strong>Password Hashing:</strong> Uses a secure SHA-512 salt-and-hash system.</li>
-                        <li><strong>Keychain Integration:</strong> Securely stores the password hash, salt, and encryption keys in the macOS Keychain.</li>
-                        <li><strong>Biometric Login:</strong> Full integration with Touch ID using the LocalAuthentication framework.</li>
+                        <li><strong>Instant Invisibility:</strong> Hide folders or documents immediately with a single click.</li>
+                        <li><strong>Safe from Prying Eyes:</strong> Perfect for locking everyday files when sharing your Mac with family or colleagues.</li>
+                        <li><strong>Dual Protection:</strong> Swap seamlessly between rapid stealth hiding and industrial-grade AES encryption.</li>
                     </ul>
                 </div>
+                <div class="feature-card-visual">
+                    <div class="video-container-mac">
+                        <div class="mac-titlebar">
+                            <div class="mac-buttons">
+                                <div class="mac-btn close"></div>
+                                <div class="mac-btn minimize"></div>
+                                <div class="mac-btn maximize"></div>
+                            </div>
+                            <span class="mac-title">Orga Vault Manager</span>
+                        </div>
+                        <img src="images/files.png" class="native-mockup" alt="Orga Vault Active Window Showcase">
+                    </div>
+                </div>
             </div>
-        </section>
 
-        <section class="feature-section">
-            <div class="container feature-content">
-                <div class="feature-text">
-                    <h3>Advanced Temporary File Management</h3>
-                    <p>Orga leaves no trace. Decrypted files are managed in a secure, self-destructing temporary cache.</p>
+            <!-- Card 2: Biometric Touch ID Security (1 column) -->
+            <div class="feature-card-block card-theme-purple reveal">
+                <div>
+                    <h3>Touch ID security.</h3>
+                    <p>Access your vaults securely without typing long, complex passwords every time you open a file:</p>
                     <ul>
-                        <li>Implemented a multi-layered security strategy for temporary decrypted files.</li>
-                        <li>Automatically cleans up the entire temporary directory on every launch.</li>
-                        <li>A 5-minute "self-destruct" timer automatically deletes temporary files when the app is inactive.</li>
+                        <li><strong>Biometric Unlock:</strong> Touch the sensor on your Mac keyboard to open vaults instantly.</li>
+                        <li><strong>No Stored Passwords:</strong> Credentials are salted, hashed, and never saved in plain text.</li>
+                        <li><strong>Keychain Lock:</strong> Integration with macOS system Keychains secures encryption keys at the hardware level.</li>
                     </ul>
                 </div>
-                <div class="feature-image">
-                    <img src="images/orga-feature-3.jpg" alt="Orga Temp File Management">
+                <div class="video-container-mac">
+                    <div class="mac-titlebar">
+                        <div class="mac-buttons">
+                            <div class="mac-btn close"></div>
+                            <div class="mac-btn minimize"></div>
+                            <div class="mac-btn maximize"></div>
+                        </div>
+                        <span class="mac-title">Vault Locked</span>
+                    </div>
+                    <img src="images/logIn.png" class="native-mockup" alt="Orga Touch ID Lock Screen Window Showcase">
                 </div>
             </div>
-        </section>
 
-        <section class="feature-section alt-bg">
-            <div class="container feature-content reversed">
-                <div class="feature-image">
-                    <img src="images/orga-feature-4.png" alt="Orga Modern UI">
-                </div>
-                <div class="feature-text">
-                    <h3>Modern, Minimalistic User Interface</h3>
-                    <p>A beautiful, responsive UI built with a professional sidebar layout using SwiftUI.</p>
+            <!-- Card 3: Zero-Trace Auto Lock (1 column) -->
+            <div class="feature-card-block card-theme-amber reveal">
+                <div>
+                    <h3>Zero traces left behind.</h3>
+                    <p>Work confidently knowing Orga handles security cycles in the background, cleaning up after you:</p>
                     <ul>
-                        <li>Category-based filtering system (All, Images, Videos, etc.).</li>
-                        <li>Designed and implemented a central <code>Theme.swift</code> style guide for brand consistency.</li>
-                        <li>Polished user experience with transparent UI elements and minimalistic effects.</li>
+                        <li><strong>Inactivity Watchdog:</strong> The app detects if you step away and automatically locks vaults after 5 minutes.</li>
+                        <li><strong>Self-Destruct Cache:</strong> Temporary sandboxed preview files are permanently deleted on lock.</li>
+                        <li><strong>Safe Launches:</strong> Fully wipes temporary directories every time you open or quit the app.</li>
                     </ul>
                 </div>
+                <div class="video-container-mac">
+                    <div class="mac-titlebar">
+                        <div class="mac-buttons">
+                            <div class="mac-btn close"></div>
+                            <div class="mac-btn minimize"></div>
+                            <div class="mac-btn maximize"></div>
+                        </div>
+                        <span class="mac-title">Settings</span>
+                    </div>
+                    <img src="images/settings.png" class="native-mockup" alt="Orga Preferences Window Showcase">
+                </div>
             </div>
-        </section>
 
-        <section class="product-section">
+            <!-- Card 4: Native Shortcuts & Sorting (Span 2 columns) -->
+            <div class="feature-card-block card-span-2 card-theme-green reveal">
+                <div class="feature-card-text">
+                    <h3>Fast shortcuts & native sorting.</h3>
+                    <p>Orga feels like a natural extension of your operating system. Navigate files with native speed and ease:</p>
+                    <ul>
+                        <li><strong>Keyboard Hotkeys:</strong> Lock, unlock, and manage files with fast keyboard shortcuts.</li>
+                        <li><strong>Smart Category Sorting:</strong> Organize and filter vault items instantly by file type (Images, Videos, Documents, Archives).</li>
+                        <li><strong>Designed for macOS:</strong> Sleek sidebar, clean window frames, and standard visual transitions built entirely in SwiftUI.</li>
+                    </ul>
+                </div>
+                <div class="feature-card-visual">
+                    <div class="video-container-mac">
+                        <div class="mac-titlebar">
+                            <div class="mac-buttons">
+                                <div class="mac-btn close"></div>
+                                <div class="mac-btn minimize"></div>
+                                <div class="mac-btn maximize"></div>
+                            </div>
+                            <span class="mac-title">Welcome Onboarding</span>
+                        </div>
+                        <img src="images/onBoarding3.png" class="native-mockup" alt="Orga Onboarding Tutorial Shortcuts Showcase">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Tech Stack section -->
+        <section class="product-tech reveal">
             <div class="container">
-                <h2 style="text-align: center;">Technical Stack</h2>
+                <h2 class="section-title">Technical specifications.</h2>
                 <div class="skills-grid">
-                    <div class="skill-item">Swift</div>
-                    <div class="skill-item">SwiftUI</div>
-                    <div class="skill-item">CryptoKit</div>
+                    <div class="skill-item">Swift 5.10</div>
+                    <div class="skill-item">SwiftUI 5.0</div>
+                    <div class="skill-item">Apple CryptoKit</div>
                     <div class="skill-item">LocalAuthentication</div>
-                    <div class="skill-item">KeychainAccess</div>
-                    <div class="skill-item">MVVM Architecture</div>
-                    <div class="skill-item">FileManager API</div>
+                    <div class="skill-item">KeychainAccess APIs</div>
+                    <div class="skill-item">MVVM Design</div>
+                    <div class="skill-item">FileManager APIs</div>
                 </div>
             </div>
         </section>
-        
     </div>
     
+    <!-- Footer -->
     <footer id="contact">
-        <div class="container">
-            <h2>Let's Collaborate</h2>
+        <div class="container reveal">
+            <h2>Help us bring Orga to iPhone & iPad.</h2>
+            <p>We want to bring Orga's secure vaults to your mobile Apple devices. Since iOS doesn't support sideloading, compiling, signing, and releasing the app requires developer fees and hosting costs. If you would like to donate, support, or collaborate to help fund the iOS app release, get in touch.</p>
+            
             <div class="contact-links">
-                <a href="https://www.linkedin.com/in/bhavesh-tembhurkar-75b5862ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-primary" target="_blank">LinkedIn</a>
-                <a href="https://github.com/bhavesh-tembhurkar" class="btn btn-primary" target="_blank">GitHub</a>
-                <a href="mailto:bhaveshtembhurkar816@gmail.com?subject=Hello&body=Hi Bhavesh, I would like to connect with you." class="btn btn-primary">Email Me</a>
-
+                <a href="mailto:bhaveshtembhurkar816@gmail.com?subject=Supporting Orga for iOS&body=Hi Bhavesh, I would like to support or donate to help bring Orga to iPhone and iPad." class="btn btn-primary" id="orga-email">Support the iOS Port</a>
+                <a href="https://www.linkedin.com/in/bhavesh-tembhurkar-75b5862ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-secondary" target="_blank" id="orga-linkedin">Connect on LinkedIn</a>
             </div>
+            
+            <p class="copyright">&copy; 2026 Bhavesh Tembhurkar. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
