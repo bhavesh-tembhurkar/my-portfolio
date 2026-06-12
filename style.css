@@ -673,7 +673,7 @@ h1, h2, h3, h4 {
 
 
 /* ==========================================================================
-   Google Chrome Light & Premium Redesign (Scoped for Orga landing page)
+   Orga Dark Chocolate & Glowing Amber Redesign (Scoped for Orga landing page)
    ========================================================================== */
 
 /* Remove background decorative glow bubbles on Orga page */
@@ -681,26 +681,30 @@ h1, h2, h3, h4 {
     display: none !important;
 }
 
-/* Scoped Overrides for Light Mode Showcase */
+/* Scoped Overrides for Immersive Dark Theme */
 .orga-body {
-    background-color: #ffffff !important;
-    color: #3c4043 !important; /* Material 3 gray */
+    background-color: #0c0806 !important;
+    background-image: 
+        radial-gradient(circle at 50% 15%, rgba(255, 90, 30, 0.15) 0%, rgba(12, 8, 6, 0) 50%),
+        radial-gradient(circle at 50% 55%, rgba(255, 90, 30, 0.1) 0%, rgba(12, 8, 6, 0) 50%),
+        radial-gradient(circle at 50% 85%, rgba(255, 90, 30, 0.08) 0%, rgba(12, 8, 6, 0) 50%) !important;
+    color: #d3c5bc !important; /* Warm light gray */
     font-family: var(--font-body);
 }
 
 .orga-body h1, .orga-body h2, .orga-body h3, .orga-body h4 {
-    color: #202124 !important; /* Deep Material black */
+    color: #ffffff !important; /* High contrast warm white */
     font-family: var(--font-heading);
 }
 
-/* Chrome-Style Glass Navbar */
+/* Frosted Dark Glass Navbar */
 .orga-body #product-navbar {
-    background: rgba(255, 255, 255, 0.85) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
-    border-bottom: 1px solid #e8eaed !important;
-    box-shadow: 0 1px 4px rgba(32, 33, 36, 0.04) !important;
-    padding: 8px 0;
+    background: rgba(12, 8, 6, 0.75) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2) !important;
+    padding: 12px 0;
 }
 
 .orga-body #back-brand {
@@ -716,14 +720,14 @@ h1, h2, h3, h4 {
     text-decoration: underline;
 }
 
-/* Chrome-Style Product Header */
+/* Scoped Product Header */
 .orga-body .product-page {
     padding-top: 80px;
-    background-color: #ffffff;
+    background-color: transparent !important;
 }
 
 .orga-body .product-header {
-    padding: 120px 0 80px;
+    padding: 140px 0 80px;
     text-align: center;
 }
 
@@ -732,7 +736,7 @@ h1, h2, h3, h4 {
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -1.5px;
-    color: #202124 !important;
+    color: #ffffff !important;
     background: none !important;
     -webkit-text-fill-color: initial !important;
     margin-bottom: 24px;
@@ -740,7 +744,7 @@ h1, h2, h3, h4 {
 
 .orga-body .tagline {
     font-size: 1.5rem;
-    color: #5f6368 !important;
+    color: #d3c5bc !important;
     max-width: 800px;
     margin: 0 auto 40px;
     line-height: 1.5;
@@ -755,20 +759,20 @@ h1, h2, h3, h4 {
     padding: 16px 36px !important;
     border-radius: 100px !important;
     border: none !important;
-    box-shadow: 0 4px 12px rgba(255, 87, 51, 0.25) !important;
+    box-shadow: 0 6px 20px rgba(255, 87, 51, 0.3) !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .orga-body .btn-primary:hover {
     opacity: 0.95;
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 16px rgba(255, 87, 51, 0.45) !important;
+    box-shadow: 0 8px 25px rgba(255, 87, 51, 0.5) !important;
 }
 
 .orga-body .btn-secondary {
-    background: #ffffff !important;
+    background: rgba(255, 255, 255, 0.04) !important;
     color: #FF5733 !important;
-    border: 1px solid #dadce0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
     font-weight: 600;
     font-size: 1.05rem;
     padding: 16px 36px !important;
@@ -777,17 +781,35 @@ h1, h2, h3, h4 {
 }
 
 .orga-body .btn-secondary:hover {
-    background: #f8f9fa !important;
+    background: rgba(255, 255, 255, 0.08) !important;
     border-color: #FF5733 !important;
     transform: translateY(-2px) !important;
 }
 
-/* Chrome Installation Section */
+/* Installation Section (Dark Glass) */
 .orga-body .install-section {
-    background-color: #f8f9fa !important;
-    border-top: 1px solid #e8eaed !important;
-    border-bottom: 1px solid #e8eaed !important;
+    background-color: rgba(20, 14, 10, 0.4) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
     padding: 100px 0 !important;
+}
+
+.orga-body .feature-content {
+    display: flex !important;
+    align-items: center !important;
+    gap: 70px !important;
+}
+
+.orga-body .feature-text {
+    flex: 1.1 !important;
+    text-align: left !important;
+}
+
+.orga-body .feature-image {
+    flex: 0.9 !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 0 !important;
 }
 
 .orga-body .install-steps {
@@ -807,7 +829,7 @@ h1, h2, h3, h4 {
     position: absolute !important;
     left: 0 !important;
     top: 0 !important;
-    background: rgba(255, 87, 51, 0.1) !important; /* Soft Orga Orange background */
+    background: rgba(255, 87, 51, 0.12) !important; /* Soft Orga Orange background */
     border: none !important;
     color: #FF5733 !important;
     width: 40px !important;
@@ -820,29 +842,29 @@ h1, h2, h3, h4 {
 
 .orga-body .install-steps li strong {
     font-size: 1.25rem !important;
-    color: #202124 !important;
+    color: #ffffff !important;
     font-weight: 600;
 }
 
 .orga-body .install-steps li p {
     font-size: 1rem !important;
-    color: #5f6368 !important;
+    color: #b1a298 !important;
     line-height: 1.5;
 }
 
-/* Premium White macOS Mockup Frame */
+/* Premium Dark macOS Mockup Frame */
 .orga-body .video-container-mac {
-    background: #ffffff !important;
+    background: #160c05 !important; /* App lockscreen color */
     border-radius: 16px !important;
-    border: 1px solid #dadce0 !important;
-    box-shadow: 0 20px 40px rgba(32, 33, 36, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5) !important;
     overflow: hidden;
     width: 100%;
 }
 
 .orga-body .mac-titlebar {
-    background: #f1f3f4 !important;
-    border-bottom: 1px solid #e8eaed !important;
+    background: #18110d !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
     height: 40px !important;
     display: flex;
     align-items: center;
@@ -869,18 +891,18 @@ h1, h2, h3, h4 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    color: #5f6368 !important;
+    color: #9e8e84 !important;
     font-weight: 600;
     font-size: 0.85rem !important;
 }
 
-/* Video Responsive Display Fixes */
+/* Video Responsive Display */
 .orga-body .video-embed {
     position: relative !important;
     padding-bottom: 56.25% !important; /* 16:9 Aspect Ratio */
     height: 0 !important;
     overflow: hidden !important;
-    background-color: #f1f3f4 !important;
+    background-color: #18110d !important;
     width: 100% !important;
 }
 
@@ -893,27 +915,177 @@ h1, h2, h3, h4 {
     border: 0 !important;
 }
 
-/* Features Layout: Chrome-Style Grid Cards */
+.orga-body .video-thumbnail-wrapper {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    overflow: hidden !important;
+}
+
+.orga-body .video-thumbnail-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.4s ease !important;
+}
+
+.orga-body .video-thumbnail-wrapper:hover .video-thumbnail-img {
+    transform: scale(1.03) !important;
+}
+
+.orga-body .video-play-btn {
+    position: absolute !important;
+    width: 68px !important;
+    height: 68px !important;
+    background: rgba(255, 87, 51, 0.9) !important; /* Glowing Orga orange */
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 20px rgba(255, 87, 51, 0.4) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 2 !important;
+}
+
+.orga-body .video-play-btn svg {
+    width: 26px !important;
+    height: 26px !important;
+    color: #ffffff !important;
+    margin-left: 4px !important; /* Centering adjustment for triangle */
+}
+
+.orga-body .video-thumbnail-wrapper:hover .video-play-btn {
+    background: #ff7043 !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 25px rgba(255, 87, 51, 0.65) !important;
+}
+
+/* Interactive Walkthrough Widget (Immersive Dark) */
+.orga-body .walkthrough-section {
+    padding: 100px 0;
+    background-color: transparent !important;
+    text-align: center;
+}
+
+.orga-body .walkthrough-section h2 {
+    font-size: 3.2rem !important;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.orga-body .walkthrough-section p.section-desc {
+    font-size: 1.35rem;
+    color: #b1a298;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.orga-body .walkthrough-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 45px;
+    flex-wrap: wrap;
+}
+
+.orga-body .walkthrough-tab {
+    padding: 10px 24px;
+    background-color: rgba(255, 255, 255, 0.04);
+    color: #b1a298;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 100px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.orga-body .walkthrough-tab:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+
+.orga-body .walkthrough-tab.active {
+    background: var(--primary-gradient) !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+    box-shadow: 0 4px 15px rgba(255, 87, 51, 0.3) !important;
+}
+
+.orga-body .walkthrough-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.orga-body .walkthrough-display {
+    background: #160c05 !important;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 30px 65px rgba(0, 0, 0, 0.65);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.orga-body .walkthrough-display:hover {
+    transform: scale(1.01);
+}
+
+.orga-body .walkthrough-screen {
+    width: 100%;
+    height: auto;
+    display: none;
+    object-fit: contain;
+}
+
+.orga-body .walkthrough-screen.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+/* Feature card visual native macOS mockup styling */
+.orga-body .feature-card-block .video-container-mac {
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+    width: 100%;
+}
+
+.orga-body .feature-card-block img.native-mockup {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Features Headline */
 .orga-body .features-headline {
     padding: 120px 0 60px !important;
-    background-color: #ffffff !important;
+    background-color: transparent !important;
 }
 
 .orga-body .features-headline h2 {
     font-size: 3.2rem !important;
     font-weight: 800;
     letter-spacing: -1px;
-    color: #202124 !important;
+    color: #ffffff !important;
     margin-bottom: 20px;
 }
 
 .orga-body .features-headline p {
     font-size: 1.35rem !important;
-    color: #5f6368 !important;
+    color: #b1a298 !important;
     max-width: 750px;
 }
 
-/* New Grid System for Chrome-style Feature blocks */
+/* Grid System for Immersive Dark Glass cards */
 .orga-body .features-grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -923,14 +1095,17 @@ h1, h2, h3, h4 {
     padding: 0 30px 100px;
 }
 
-/* Base card block style */
 .orga-body .feature-card-block {
-    border-radius: 28px !important; /* Huge rounded Material 3 corners */
+    background-color: rgba(22, 14, 10, 0.6) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 28px !important;
     padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
     min-height: 480px;
@@ -938,6 +1113,7 @@ h1, h2, h3, h4 {
 
 .orga-body .feature-card-block:hover {
     transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
 }
 
 .orga-body .feature-card-block h3 {
@@ -946,14 +1122,14 @@ h1, h2, h3, h4 {
     line-height: 1.2;
     margin-bottom: 16px;
     letter-spacing: -0.5px;
-    background: none !important;
-    -webkit-text-fill-color: initial !important;
+    color: #ffffff !important;
 }
 
 .orga-body .feature-card-block p {
     font-size: 1.15rem !important;
     line-height: 1.6;
     margin-bottom: 30px;
+    color: #d3c5bc !important;
 }
 
 .orga-body .feature-card-block ul {
@@ -969,7 +1145,7 @@ h1, h2, h3, h4 {
     padding-left: 28px !important;
     position: relative;
     line-height: 1.5;
-    margin-bottom: 0 !important;
+    color: #b1a298 !important;
 }
 
 .orga-body .feature-card-block li::before {
@@ -1004,71 +1180,87 @@ h1, h2, h3, h4 {
 .orga-body .feature-card-visual img {
     max-width: 100%;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(32, 33, 36, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Individual Pastel Color Themes (scoped colors) */
 /* Card 1: Dual Mode - Orange/Bronze */
 .orga-body .card-theme-orange {
-    background-color: #fff3e0 !important; /* Soft light orange */
-    color: #e65100 !important;
+    background-color: rgba(255, 87, 51, 0.03) !important;
+    border: 1px solid rgba(255, 87, 51, 0.15) !important;
 }
-.orga-body .card-theme-orange h3 { color: #bf360c !important; }
-.orga-body .card-theme-orange p { color: #d84315 !important; }
-.orga-body .card-theme-orange li { color: #d84315 !important; }
+.orga-body .card-theme-orange:hover {
+    border-color: rgba(255, 87, 51, 0.45) !important;
+    box-shadow: 0 15px 40px rgba(255, 87, 51, 0.1) !important;
+}
+.orga-body .card-theme-orange h3 { color: #ffab91 !important; }
+.orga-body .card-theme-orange p { color: #ffccbc !important; }
+.orga-body .card-theme-orange li { color: #ffccbc !important; }
 .orga-body .card-theme-orange li::before { color: #ff5722 !important; }
 
 /* Card 2: Biometrics - Purple */
 .orga-body .card-theme-purple {
-    background-color: #f1f0ff !important; /* Light purple */
-    color: #553c9a !important;
+    background-color: rgba(138, 43, 226, 0.03) !important;
+    border: 1px solid rgba(138, 43, 226, 0.15) !important;
 }
-.orga-body .card-theme-purple h3 { color: #44337a !important; }
-.orga-body .card-theme-purple p { color: #553c9a !important; }
-.orga-body .card-theme-purple li { color: #553c9a !important; }
-.orga-body .card-theme-purple li::before { color: #6366f1 !important; }
+.orga-body .card-theme-purple:hover {
+    border-color: rgba(138, 43, 226, 0.45) !important;
+    box-shadow: 0 15px 40px rgba(138, 43, 226, 0.1) !important;
+}
+.orga-body .card-theme-purple h3 { color: #d1c4e9 !important; }
+.orga-body .card-theme-purple p { color: #e1bee7 !important; }
+.orga-body .card-theme-purple li { color: #e1bee7 !important; }
+.orga-body .card-theme-purple li::before { color: #8a2be2 !important; }
 
 /* Card 3: Cache Cleaner - Yellow */
 .orga-body .card-theme-amber {
-    background-color: #fef7e0 !important; /* Light amber */
-    color: #b06000 !important;
+    background-color: rgba(255, 180, 0, 0.03) !important;
+    border: 1px solid rgba(255, 180, 0, 0.15) !important;
 }
-.orga-body .card-theme-amber h3 { color: #804600 !important; }
-.orga-body .card-theme-amber p { color: #b06000 !important; }
-.orga-body .card-theme-amber li { color: #b06000 !important; }
-.orga-body .card-theme-amber li::before { color: #f29900 !important; }
+.orga-body .card-theme-amber:hover {
+    border-color: rgba(255, 180, 0, 0.45) !important;
+    box-shadow: 0 15px 40px rgba(255, 180, 0, 0.1) !important;
+}
+.orga-body .card-theme-amber h3 { color: #ffe082 !important; }
+.orga-body .card-theme-amber p { color: #ffecb3 !important; }
+.orga-body .card-theme-amber li { color: #ffecb3 !important; }
+.orga-body .card-theme-amber li::before { color: #ffb400 !important; }
 
 /* Card 4: SwiftUI - Green */
 .orga-body .card-theme-green {
-    background-color: #e6f4ea !important; /* Light green */
-    color: #137333 !important;
+    background-color: rgba(20, 200, 120, 0.03) !important;
+    border: 1px solid rgba(20, 200, 120, 0.15) !important;
 }
-.orga-body .card-theme-green h3 { color: #0d652d !important; }
-.orga-body .card-theme-green p { color: #137333 !important; }
-.orga-body .card-theme-green li { color: #137333 !important; }
+.orga-body .card-theme-green:hover {
+    border-color: rgba(20, 200, 120, 0.45) !important;
+    box-shadow: 0 15px 40px rgba(20, 200, 120, 0.1) !important;
+}
+.orga-body .card-theme-green h3 { color: #a5d6a7 !important; }
+.orga-body .card-theme-green p { color: #c8e6c9 !important; }
+.orga-body .card-theme-green li { color: #c8e6c9 !important; }
 .orga-body .card-theme-green li::before { color: #1e8e3e !important; }
 
 
-/* Tech Stack Section Light Mode */
+/* Tech Stack Section (Dark Glass) */
 .orga-body .product-tech {
-    background-color: #f8f9fa !important;
-    border-top: 1px solid #e8eaed !important;
+    background-color: rgba(20, 14, 10, 0.4) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
     padding: 100px 0 !important;
 }
 
 .orga-body .product-tech .section-title {
     background: none !important;
     -webkit-text-fill-color: initial !important;
-    color: #202124 !important;
+    color: #ffffff !important;
     font-weight: 800;
 }
 
 .orga-body .product-tech .skill-item {
-    background: #ffffff !important;
-    color: #3c4043 !important;
-    border: 1px solid #dadce0 !important;
-    box-shadow: 0 2px 6px rgba(32, 33, 36, 0.04) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    color: #d3c5bc !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
     font-weight: 600;
     border-radius: 12px !important;
 }
@@ -1076,47 +1268,42 @@ h1, h2, h3, h4 {
 .orga-body .product-tech .skill-item:hover {
     border-color: #FF5733 !important;
     color: #FF5733 !important;
+    background: rgba(255, 87, 51, 0.05) !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 4px 12px rgba(255, 87, 51, 0.08) !important;
+    box-shadow: 0 8px 16px rgba(255, 87, 51, 0.15) !important;
 }
 
-/* Footer Section Light Mode */
+/* Footer Section (Immersive Dark) */
 .orga-body #contact {
-    background: #ffffff !important;
-    border-top: 1px solid #e8eaed !important;
-    color: #3c4043 !important;
+    background: #080504 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    color: #b1a298 !important;
     padding: 100px 0 60px !important;
 }
 
 .orga-body #contact h2 {
-    color: #202124 !important;
+    color: #ffffff !important;
     font-size: 2.8rem;
     font-weight: 800;
 }
 
 .orga-body #contact p {
-    color: #5f6368 !important;
+    color: #b1a298 !important;
 }
 
 .orga-body #contact .btn-secondary {
-    background: #ffffff !important;
-    color: #3c4043 !important;
-    border: 1px solid #dadce0 !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    color: #b1a298 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 .orga-body #contact .btn-secondary:hover {
-    background: #f8f9fa !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
     border-color: #747775 !important;
 }
 
 .orga-body .copyright {
-    color: #80868b !important;
-}
-
-/* Walkthrough Widget Styling */
-.orga-body .walkthrough-section {
-    padding: 80px 0;
-    background-color: #ffffff;
     text-align: center;
 }
 
@@ -1268,5 +1455,12 @@ h1, h2, h3, h4 {
         flex-direction: column;
         align-items: center;
         gap: 12px;
+    }
+    .orga-body .feature-content {
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+    .orga-body .feature-text, .orga-body .feature-image {
+        width: 100% !important;
     }
 }
